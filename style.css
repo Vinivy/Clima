@@ -15,6 +15,8 @@ html {
   
   height: 100vh;
   width: 100vw;
+
+  color: #fff;
 }
 
 body {
@@ -23,11 +25,13 @@ body {
   grid-template-rows: 40vh;
 }
 
+/*Box principal*/
 #Box1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   grid-column-start: 1;
+  gap: 120px;
 
   width: 480px;
   height: 480px;
@@ -44,8 +48,21 @@ body {
 }
 
 #Box1 p {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
   margin: 35px 32px 0 0;
   text-align: end;
+}
+
+#Box1 p span {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  padding-left: 5px;
 }
 
 .temperature {
@@ -55,7 +72,7 @@ body {
 }
 
 .temperature h1 {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 88px;
@@ -66,8 +83,8 @@ body {
 
 .Modelos {
   display: flex;
-  justify-content: space-evenly;
-  
+  justify-content: space-around;
+
 }
 
 .vento, .umidade,.chuva {
@@ -82,27 +99,104 @@ body {
   border-radius: 6px;
 }
 
+.vento div h4, .umidade div h4, .chuva div h4 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
 
+  text-align: center;
+}
 
+.vento div strong, .umidade div strrong, .chuva div strong{
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+}
+/*Box lateral-1*/
 #Box-right1 {
-  grid-area: 'B';
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
   width: 277px;
   height: 244px;
+
   background: #6D67D0;
   backdrop-filter: blur(10px);
   border-radius: 10px;
 }
 
+.Ar p {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  text-align: end;
+}
+
+.Ar p span {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 5px;
+}
+
+.Ventania {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Ventania p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #87EBCD;
+}
+
+.Ventania h2 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+#Box-right1 section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+/*Segunda lateral*/
 #Box-right2 {
-  grid-area: 'C';
   width: 277px;
   height: 244px;
+
   background: #6D67D0;
   backdrop-filter: blur(10px);
   border-radius: 10px;
 }
 
-#Box-bottom {
+/*Barra clima dos dias*/
+#Box-previst{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   grid-column-start: 2;
   grid-column-end: 4;
 
@@ -111,4 +205,38 @@ body {
   width: 578px;
   height: 212px;
   border-radius: 10px;
+}
+
+#Box-previst section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.proximo, .sexta, .sabado, .domingo, .segunda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+
+  width: 90px;
+  height: 132px;
+}
+
+.proximo h4, .sexta h4, .sabado h4, .domingo h4, .segunda h4 {
+  font-family: 'Lato' sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.proximo p span, .sexta p span, .sabado p span, .domingo p span, .segunda p span {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 }
