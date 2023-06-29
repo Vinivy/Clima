@@ -42,7 +42,7 @@ if (today == 14) {
 } else if (today == 23) {
   solsvg.style.left = '87px'
   solsvg.style.top = '33px'
-} else if (today == 00) {
+} else if (today == 24) {
   solsvg.style.left = '90px'
   solsvg.style.top = '48px'
 }
