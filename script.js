@@ -71,15 +71,14 @@ function MostarClima(cidade) {
       let infoV = document.querySelector('.infoV')
       let Ventania = document.querySelector('.exibvento')
       Ventania.textContent = vento
-      if (vento >= 5) {
-        infoV.textContent = 'Boa'
-      } else {
+      if (vento < 5) {
         infoV.textContent = 'Ruim'
+      } else {
+        infoV.textContent = 'Boa'
       }
     })
 }
 MostarClima('São José do Campestre, BR')
-
 //se caso aconteçaum erro..
 /*.catch(error => {
     console.log('Ocorreu um erro:', error)
