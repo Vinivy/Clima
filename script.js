@@ -46,3 +46,41 @@ if (today == 14) {
   solsvg.style.left = '90px'
   solsvg.style.top = '48px'
 }
+
+//API de clima
+const Mykey = 'be04969215f645cf10850507f6e1884b'
+const ApiUrl =
+  'https://api.openweathermap.org/data/2.5/weather?q=São José do Campestre, BR&appid=be04969215f645cf10850507f6e1884b'
+
+function MostarClima(cidade) {
+  fetch(ApiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const temperatura = data.main.temp
+      /*const umidade = data.main.humidity
+      const velocidadeVento = data.wind.speed*/
+      const vento = data.wind.speed
+      //temperatura
+      let grau = document.querySelector('.Grau')
+      // aqui estou a usar Math.round para arrendondar o valor
+      let temperaturaFormatada = Math.round(temperatura - 273.15).toFixed(1)
+      grau.textContent = temperaturaFormatada + '°'
+
+      //Ventania
+      //informaçã se A Ventania ta boa ou não
+      let infoV = document.querySelector('.infoV')
+      let Ventania = document.querySelector('.exibvento')
+      Ventania.textContent = vento
+      if (vento >= 5) {
+        infoV.textContent = 'Boa'
+      } else {
+        infoV.textContent = 'Ruim'
+      }
+    })
+}
+MostarClima('São José do Campestre, BR')
+
+//se caso aconteçaum erro..
+/*.catch(error => {
+    console.log('Ocorreu um erro:', error)
+  })*/
