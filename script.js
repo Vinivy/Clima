@@ -63,7 +63,7 @@ function MostarClima(cidade) {
       //temperatura
       let grau = document.querySelector('.Grau')
       // aqui estou a usar Math.round para arrendondar o valor
-      let temperaturaFormatada = Math.round(temperatura - 273.15).toFixed(1)
+      let temperaturaFormatada = Math.round(temperatura - 272.15).toFixed(1)
       grau.textContent = temperaturaFormatada + '°'
 
       //Ventania
